@@ -2,10 +2,11 @@
 // PLACA WEMOS - D1 R2 & MINI
 // BN: Unknown board + VID: 1A86 + PID: 7523
 // CPU: 80 MHz + FLASH SIZE: 4M (3M SPIFFS) + UPLOAD SPEED: 921600 bps
+// http://arduino.esp8266.com/stable/package_esp8266com_index.json 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // ESP8266 TYPE 12 - PROGRAM HEADER TEMPLATE - 2017 - FEBRUARY
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-// COMPILED WUT ARDUINO IDE VERSION - 1.8.1 - WEMOS - D1 R2 & MINI
+// COMPILED ARDUINO IDE VERSION - 1.8.1 - WEMOS - D1 R2 & MINI
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 #define      LED_BUILTIN   2    // LED_BUILTIN
 #define      LED_EXTERNAL  D1    // EXTERNAL LED
@@ -52,7 +53,7 @@ void setup() {                         // COMMENT - UNCOMMENT AS NECESSARY
   pinMode(LED_BUILTIN, OUTPUT);     // Initialize the LED_BUILTIN - output
   digitalWrite(LED_BUILTIN, HIGH);    // turn LED OFF - acive low on ESP07
   pinMode(LED_EXTERNAL, OUTPUT);    // Initialize the LED_BUILTIN - output
-  digitalWrite(LED_EXTERNAL, LOW);    // turn LED OFF - acive low on ESP07
+  digitalWrite(LED_EXTERNAL, LOW);    // turn LED ON - acive low on ESP07
 
 /*----------------------------------------------------------------------*/
   Serial.begin(115200);
@@ -66,6 +67,7 @@ void setup() {                         // COMMENT - UNCOMMENT AS NECESSARY
   Serial.print("\n| MAC NUMBER: " + WiFi.macAddress());
   Serial.print(" - - - - - - - - - |");
   Serial.print("\n| - - - - - - - - - - - - - - - - - - - - - - - - |");
+/* YOUR SETTINGS HERE!!!*/
 }
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // LOOP FUNCTION RUNS LIKE A WHILE LOOP IN ANY LANGUAGE
@@ -78,3 +80,4 @@ LedATLblinks(T);    T++;  if (T == 10) T = 0;
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 // MAIN FUNCTION END - FINAL
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+
